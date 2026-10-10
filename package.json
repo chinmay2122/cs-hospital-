@@ -1,0 +1,12 @@
+{
+  "name": "chitta-studios-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chitta Studios: hospital websites landing page with order checkout",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "node --env-file=.env scripts/dev-server.js",
+    "set-url": "node scripts/set-site-url.js"
+  },
+  "dependencies": { "nodemailer": "^6.9.16" }
+}
