@@ -117,11 +117,13 @@ $('cof').addEventListener('submit',function(e){
     if(!x.ok){var er=new Error(x.j&&x.j.error||'');er.shown=!!(x.j&&x.j.error);throw er}
     form.hidden=true;
     $('cot').textContent='Order Sent!';
-    $('sum').innerHTML='<div style="background:rgba(47,143,78,.14);border:1.5px solid rgba(47,143,78,.35);padding:14px 16px;border-radius:14px;color:var(--ok);margin-bottom:14px">'+
-      '<b>✓ Thank you, '+esc(d.name)+'!</b>'+
-      '<div style="font-size:13.5px;color:var(--ink);margin-top:4px">Your order for <b>'+esc(d.hospital)+'</b> has been automatically sent to our team. We will contact you on <b>'+esc(d.phone)+'</b> shortly to confirm.</div></div>'+
+    $('sum').innerHTML=
+      '<div class="confirm-alert">'+
+        '<h4>✓ Thank you, '+esc(d.name)+'!</h4>'+
+        '<p>Your order for <b>'+esc(d.hospital)+'</b> has been automatically sent to our team. We will contact you on <b>'+esc(d.phone)+'</b> shortly to confirm.</p>'+
+      '</div>'+
       summary()+
-      '<div style="margin-top:16px"><button class="btn go" style="width:100%" type="button" id="cl2">Close</button></div>';
+      '<div class="btn-wrap"><button class="btn go" style="width:100%" type="button" id="cl2">Close</button></div>';
     $('cl2').addEventListener('click',function(){$('cxl').click()});
   }).catch(function(err){
     btn.disabled=false;msg.className='msg err';

@@ -176,8 +176,12 @@ dialog{border:0;padding:0;background:transparent;width:min(580px,94vw);max-heigh
 dialog::backdrop{background:rgba(5,15,35,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .box{background:var(--dlg);border:1px solid var(--glass-b);border-radius:24px;padding:26px;max-height:92vh;overflow:auto;box-shadow:var(--shadow)}
 .box h2{font-size:30px}
+.confirm-alert{display:block !important;background:rgba(47,143,78,.12);border:1.5px solid rgba(47,143,78,.35);padding:16px 18px;border-radius:16px;margin-bottom:14px;text-align:left}
+.confirm-alert h4{margin:0 0 6px;font:700 17px var(--b);color:var(--ok);display:block}
+.confirm-alert p{margin:0;font:400 14.5px/1.55 var(--b);color:var(--ink);display:block}
 .sum{margin:16px 0 4px;padding:14px 16px;border-radius:16px;background:var(--glass-in);font-size:15px}
-.sum div{display:flex;justify-content:space-between;gap:14px;padding:3px 0}
+.sum div:not(.confirm-alert):not(.btn-wrap){display:flex;justify-content:space-between;gap:14px;padding:3px 0}
+.sum .btn-wrap{display:block !important;margin-top:18px}
 .sum .dc{color:var(--ok);font-weight:600}
 .sum .tt{border-top:1px solid var(--line);margin-top:6px;padding-top:9px;font:800 19px var(--d)}
 .sum small{display:block;color:var(--ink2);font-size:13px;margin-top:6px}
